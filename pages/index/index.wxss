@@ -1,0 +1,51 @@
+/**index.wxss**/
+.vote-top {
+  margin-top: 6vh;
+  position: relative;
+  border-bottom: 1px solid #e4e4e4;
+}
+.banner {
+  height: 50vw;
+}
+.info {
+  position: relative;
+  width: 94vw;
+  margin: auto;
+  box-shadow: 0 0 20px #d1d1d1;
+  background-color: white;
+  margin-top: -40rpx;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+}
+.tb-inline {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.deadline {
+  padding: 40rpx 8vw;
+  width: 84vw;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.deadline .line {
+  width: 20vw;
+  border-bottom: 2rpx solid #cecece; 
+  flex-grow: 1 ;
+}
+
+.introduction {
+  position: absolute;
+  bottom: 15rpx;
+  right: 15rpx;
+  border-left: 5rpx solid #ef3b4f;
+  padding-left: 25rpx;
+  font-size: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}

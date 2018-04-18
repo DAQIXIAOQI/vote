@@ -1,0 +1,30 @@
+<view class = 'gray-content fc-black'>
+    <topNotice text = '恭喜XXX获得本次活动的擂主~！' bgcolor = '#373b41' ></topNotice>
+    <view class='vote-top'>
+      <view class='banner'>
+        <imgBox src = 'http://dev.guotu.zsylife.cn/minidata/index01.png'>
+        </imgBox>
+      </view>
+      <view class='info fs-medium'>
+        <view class='tb-inline'><view class='top'>报名人数</view><view class='bottom'>12</view></view>
+        <view class='tb-inline'><view class='top'>报名人数</view><view class='bottom'>12</view></view>
+        <view class='tb-inline'><view class='top'>报名人数</view><view class='bottom'>12</view></view>
+      </view>
+      <view class='deadline fs-medium'><view class='line left'></view><text>距离活动结束时间还有：<text>01:02:56</text></text><view class='line left'></view></view>
+      <view class='introduction fs-small'>活动介绍</view>
+    </view>
+    <view class='competitor-list'>
+        <view class='list-top'>
+          <view class='list-title'>你喜欢的参赛成员在哪儿呢？</view>
+          <imgBox src='http://dev.guotu.zsylife.cn/minidata/index01.png'></imgBox>
+          <view class='list-search'>
+              <view> <text class='icon-arrow-left iconfont'></text> 搜索</view>
+              <view class = 'search-input'>
+                <text class='icon-arrow-left iconfont'></text> 
+                <input type='text' placeholder='请输入选手编号或者名字进行搜索'></input>
+                <text class='search-canel'>取消</text>
+                <view class='search-comfirm'>搜索<text>这是一串字符</text></view></view>
+          </view>
+        </view>
+    </view>
+</view>
