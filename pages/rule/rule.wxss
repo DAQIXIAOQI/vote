@@ -1,0 +1,14 @@
+.rule {
+  background-color: white;
+  margin-top: 1vh; 
+  padding: 30rpx;
+  border-bottom: 1px solid #e4e4e4;
+}
+.title {
+  text-align: center;
+  padding: 10rpx 0 40rpx 0 ;
+}
+.para {
+  display: block;
+  margin-bottom: 20rpx ;
+}

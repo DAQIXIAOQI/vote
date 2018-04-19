@@ -10,21 +10,37 @@
         <view class='tb-inline'><view class='top'>报名人数</view><view class='bottom'>12</view></view>
         <view class='tb-inline'><view class='top'>报名人数</view><view class='bottom'>12</view></view>
       </view>
-      <view class='deadline fs-medium'><view class='line left'></view><text>距离活动结束时间还有：<text>01:02:56</text></text><view class='line left'></view></view>
+      <view class='deadline fs-large'><view class='line left'></view><text>距离活动结束时间还有：<text>01:02:56</text></text><view class='line left'></view></view>
       <view class='introduction fs-small'>活动介绍</view>
     </view>
-    <view class='competitor-list'>
-        <view class='list-top'>
-          <view class='list-title'>你喜欢的参赛成员在哪儿呢？</view>
-          <imgBox src='http://dev.guotu.zsylife.cn/minidata/index01.png'></imgBox>
+    <view class='competitor-list fs-medium'>
+        <view class='list-top {{isSearch ? "open": "close"}}'>
+          <view class='list-title'>你喜欢的参赛成员在哪儿呢？<image src = '../../images/1_02.jpg'></image></view>
           <view class='list-search'>
-              <view> <text class='icon-arrow-left iconfont'></text> 搜索</view>
+              <view class='fs-small search-open' bindtap='toggleSearch'> <text class='fs-small icon-arrow-left iconfont'></text> 搜索</view>
               <view class = 'search-input'>
-                <text class='icon-arrow-left iconfont'></text> 
-                <input type='text' placeholder='请输入选手编号或者名字进行搜索'></input>
-                <text class='search-canel'>取消</text>
+                <view class='input-box'>
+                  <text class='icon-arrow-left iconfont left'></text> 
+                  <input type='text' class='left' placeholder='请输入选手编号或者名字进行搜索'></input>
+                  <text class='search-cancel fc-red' bindtap='toggleSearch'>取消</text>
+                </view>
                 <view class='search-comfirm'>搜索<text>这是一串字符</text></view></view>
           </view>
+        </view>
+        <view class='list-main'>
+          <block wx:for='{{competitorList}}' wx:key='competitorList'>
+           <view class='list-item left'>
+              <view class='img-box' data-index='{{index}}' bindtap='toMain'>
+              <imgBox src='{{item.image}}'></imgBox>
+              </view>
+              <view class='item-info fs-small'>
+                <text class='item-number left'>{{item.number}}</text>
+                <text class='item-name ellipsis'>{{item.name}}</text>
+                <view class='item-ballot'><text class='iconfont icon-arrow-left'></text>{{item.ballot}}票</view>
+              </view>
+              <view class='item-vote right {{item.isVote ? "voted":""}}' data-isvote='{{item.isVote}}' data-index='{{index}}' bindtap='vote'>{{!item.isVote ? "投票":"已投票"}}</view>
+           </view>
+           </block>  
         </view>
     </view>
 </view>

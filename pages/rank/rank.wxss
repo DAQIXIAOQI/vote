@@ -1,0 +1,64 @@
+
+.gray-content {
+  padding-top: 0;
+  min-height: 100vh;
+}
+.my-rank {
+  position: absolute;
+  top: 110rpx;
+  right: 20vw;
+  background-color: #e6e6e6;
+  padding: 5rpx 10rpx;
+  border-radius: 5rpx;
+}
+.rank-list {
+  margin-top: -60rpx;
+  position: relative;
+}
+.item {
+  border-bottom:1px solid #e0e0e0;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #ffffff;
+  font-size: 30rpx;
+}
+.item:first-child {
+  border-width:0;
+}
+.item {
+  text-align: center;
+  overflow: hidden;
+}
+.item.rank-menu {
+  height: 60rpx;
+  line-height: 60rpx;
+   background-color: transparent;
+}
+.item.rank-menu view{
+  line-height: 60rpx;
+}
+.item view {
+  width: 20%;
+  float: left;
+  line-height: 100rpx;
+}
+.item .item-rank image {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 20rpx 0 ;
+}
+.item .item-rank text{
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  border:1px solid #ef3b4f;
+  margin: 30rpx 0;
+  line-height: 40rpx;
+  border-radius: 999rpx;
+}
+.item .item-img image {
+  width: 120rpx;
+  height: 80rpx;
+  margin: 10rpx 0;
+  border-radius: 5rpx;
+}

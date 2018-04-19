@@ -1,0 +1,47 @@
+<import src='../../template/template.wxml' />
+
+<view class='gray-content'>
+  <view class='slide'>
+    <swiper autoplay>
+      <block wx:for='{{slideData}}' wx:key='competitor-slide'>
+        <swiper-item>
+          <imgBox src='{{item}}'></imgBox>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <tbNotice text='这是一条拉票宣言，拉票宣言，拉票宣言' bgcolor='rgba(169,203,212,.7)' color='#407db2' mark='declaration' ></tbNotice>
+  <view class='introduction fs-medium'>
+    <view class='introduction-title'>
+    <!-- -—— 选手介绍 —— -->
+    <imgBox src='http://dev.guotu.zsylife.cn/minidata/vote-main.jpg'></imgBox>
+    </view>
+    <view class='introduction-info'>
+      <view class='introduction-info-top'>
+        <text class='name left'>mimgzzo</text> <text class='ballot right fc-red'>45票</text><text class='number right'>001编号</text> 
+      </view>
+      <view class='introduction-info-intr fs-small'>
+        这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍这是一段介绍
+      </view>
+      <view class='vote-btn right {{isVote?"voted":""}}' bindtap='vote'>
+        {{!isVote?"给TA投票":"已投票"}}
+      </view>
+    </view>
+  </view>
+
+  <view class='message fc-black'>
+    <view class='message-top'>
+      <view class='message-btn right fs-medium' bindtap='message'>
+        <text class='icon-arrow-left iconfont'></text>写留言
+      </view>
+    </view>
+     <view class='message-list'>
+    <block wx:for='{{messageData}}' wx:key='message-list'>
+      <view class='message-item'>
+        <template is = 'commentItem' data = '{{item}}'></template>
+      </view>
+    </block>
+  </view>
+  </view>
+</view>
+<editBox id='editBox' bind:saveData = 'addMessage' placeholder='请输入你的留言'></editBox>

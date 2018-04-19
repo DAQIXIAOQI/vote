@@ -22,3 +22,14 @@
   padding-top: 1vh;
   background-color: #f5f5f5;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

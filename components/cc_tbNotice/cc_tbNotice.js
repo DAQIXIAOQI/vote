@@ -18,7 +18,8 @@ Component({
           },
           color: { type: String, value: "#ffffff" }, 
           bgcolor: { type: String, value: "#000000" },
-          automove:{type:Boolean,value:true}
+          automove:{type:Boolean,value:true},
+          mark:{ type: String, value: '' }
   },
   ready(){
     let that = this ;

@@ -1,0 +1,14 @@
+<view class='gray-content'>
+  <view class='rule fs-medium fc-black'>
+    <view class='title'>投票小程序的规则如下：</view>
+    <text class='para'>1、投票时间：11月16日9：00至12月16日17:00；</text>
+
+    <text class='para'>2、三种投票渠道累计获得的总票数将于每个工作日9时、13时、17时三个时间段更新；</text>
+
+    <text class='para'> 3、请勿恶意刷票，如一经发现投票数全部清零；</text>
+    <text class='para'> 4、候选商家通过三种渠道获得的票数将进行累加，总票数提供给专家作为重要参考，最终评选出“2015重庆消费者满意商场超市商家”15家、“2015重庆消费者满意家电销售商家”</text>
+    <text class='para'>5、“2015重庆消费者满意成品油商家”10家、“2015重庆消费者满意药店”10家、“2015重庆消费者满意餐饮商家”10家；
+</text>
+    <text class='para'> 6、本次活动一切解释权归主办方所有。</text>
+  </view>
+</view>

@@ -31,3 +31,13 @@
   width: 94%;
   margin: 0 3%;
 }
+
+.declaration.top {
+  top:55vw;
+  margin-top: -6vh;
+  position: absolute;
+}
+.declaration {
+  height:6vh;
+  line-height: 6vh; 
+}
