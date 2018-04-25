@@ -5,15 +5,18 @@
 }
 .my-rank {
   position: absolute;
-  top: 110rpx;
-  right: 20vw;
-  background-color: #e6e6e6;
-  padding: 5rpx 10rpx;
-  border-radius: 5rpx;
+  top: 130rpx;
+  right: 17vw;
+  background-color: rgb(52,53,66);
+  padding: 10rpx 20rpx;
+  border-radius: 8rpx;
+  color:rgb(214,185,147);
+  box-shadow: 0 0 10rpx rgb(214,185,147);
 }
 .rank-list {
   margin-top: -60rpx;
   position: relative;
+  
 }
 .item {
   border-bottom:1px solid #e0e0e0;
@@ -43,9 +46,9 @@
   line-height: 100rpx;
 }
 .item .item-rank image {
-  width: 60rpx;
-  height: 60rpx;
-  margin: 20rpx 0 ;
+  width: 80rpx;
+  height: 80rpx;
+  margin-top:10rpx;
 }
 .item .item-rank text{
   display: inline-block;
@@ -62,3 +65,4 @@
   margin: 10rpx 0;
   border-radius: 5rpx;
 }
+

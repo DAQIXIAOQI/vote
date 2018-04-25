@@ -10,7 +10,7 @@
       </block>
     </swiper>
   </view>
-  <tbNotice text='这是一条拉票宣言，拉票宣言，拉票宣言' bgcolor='rgba(169,203,212,.7)' color='#407db2' mark='declaration' ></tbNotice>
+  <tbNotice text='这是一条拉票宣言，拉票宣言，拉票宣言' bgcolor='rgba(198,207,213,.9)' color='#407db2' mark='declaration' ></tbNotice>
   <view class='introduction fs-medium'>
     <view class='introduction-title'>
     <!-- -—— 选手介绍 —— -->
@@ -32,7 +32,7 @@
   <view class='message fc-black'>
     <view class='message-top'>
       <view class='message-btn right fs-medium' bindtap='message'>
-        <text class='icon-arrow-left iconfont'></text>写留言
+        <text class='icon-jiantou2 iconfont'></text>写留言
       </view>
     </view>
      <view class='message-list'>
@@ -42,6 +42,8 @@
       </view>
     </block>
   </view>
+  <view class='message-notice notice'>——留言已加载完毕——</view>
   </view>
+  
 </view>
 <editBox id='editBox' bind:saveData = 'addMessage' placeholder='请输入你的留言'></editBox>

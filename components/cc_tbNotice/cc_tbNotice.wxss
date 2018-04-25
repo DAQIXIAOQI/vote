@@ -11,7 +11,7 @@
   height: 7vh;
   line-height: 7vh;
   z-index: 2;
-  font-size: 28rpx;
+  font-size: 35rpx;
   text-align: center;
   border-bottom:1px solid #e0e0e0;
 }

@@ -6,41 +6,65 @@ Page({
    */
   data: {
      listData:[{
-       image:"http://dev.guotu.zsylife.cn/minidata/rankbg.png",
+       image:"http://dev.guotu.zsylife.cn/minidata/index01.png",
        rank:1,
        "number":"001",
-       name:'大家阿卡是',
-       ballot:999 
+       name:'选手昵称',
+       ballot:998 
      }, {
-       image: "http://dev.guotu.zsylife.cn/minidata/rankbg.png",
+         image: "http://dev.guotu.zsylife.cn/minidata/index01.png",
        rank: 2,
-       "number": "001",
-       name: '大家阿卡是',
-       ballot: 999
+       "number": "002",
+       name: '选手昵称',
+       ballot: 997
        }, {
-         image: "http://dev.guotu.zsylife.cn/minidata/rankbg.png",
+         image: "http://dev.guotu.zsylife.cn/minidata/index01.png",
          rank: 3,
-         "number": "001",
-         name: '大家阿卡是',
-         ballot: 999
+         "number": "003",
+         name: '选手昵称',
+         ballot: 996
      }, {
-       image: "http://dev.guotu.zsylife.cn/minidata/rankbg.png",
+         image: "http://dev.guotu.zsylife.cn/minidata/index01.png",
        rank: 4,
-       "number": "001",
-       name: '大家阿卡是',
-       ballot: 999
+       "number": "004",
+       name: '选手昵称',
+       ballot: 995
        }, {
-         image: "http://dev.guotu.zsylife.cn/minidata/rankbg.png",
-         rank: 4,
-         "number": "001",
-         name: '大家阿卡是',
-         ballot: 999
+         image: "http://dev.guotu.zsylife.cn/minidata/index01.png",
+         rank: 5,
+         "number": "005",
+         name: '选手昵称',
+         ballot: 994
      }, {
-       image: "http://dev.guotu.zsylife.cn/minidata/rankbg.png",
-       rank: 4,
-       "number": "001",
-       name: '大家阿卡是',
-       ballot: 999
+         image: "http://dev.guotu.zsylife.cn/minidata/index01.png",
+       rank: 6,
+       "number": "006",
+       name: '选手昵称',
+       ballot: 993
+       }, {
+         image: "http://dev.guotu.zsylife.cn/minidata/index01.png",
+         rank: 7,
+         "number": "007",
+         name: '选手昵称',
+         ballot: 992
+     }, {
+         image: "http://dev.guotu.zsylife.cn/minidata/index01.png",
+       rank:8,
+       "number": "008",
+       name: '选手昵称',
+       ballot: 991
+       }, {
+         image: "http://dev.guotu.zsylife.cn/minidata/index01.png",
+         rank: 9,
+         "number": "009",
+         name: '选手昵称',
+         ballot: 990
+     }, {
+         image: "http://dev.guotu.zsylife.cn/minidata/index01.png",
+       rank: 10,
+       "number": "010",
+       name: '选手昵称',
+       ballot: 989
      }
      ],
      loadAll:false,
@@ -87,6 +111,10 @@ Page({
        showCancel:false,
        confirmText:'知道了'
      })
-  }
+  },toMain() {
+    wx.navigateTo({
+      url: '../main/main',
+    })
+  },
   
 })

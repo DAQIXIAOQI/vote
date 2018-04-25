@@ -1,46 +1,76 @@
-<view class = 'gray-content fc-black'>
-    <topNotice text = '恭喜XXX获得本次活动的擂主~！' bgcolor = '#373b41' ></topNotice>
-    <view class='vote-top'>
-      <view class='banner'>
-        <imgBox src = 'http://dev.guotu.zsylife.cn/minidata/index01.png'>
-        </imgBox>
-      </view>
-      <view class='info fs-medium'>
-        <view class='tb-inline'><view class='top'>报名人数</view><view class='bottom'>12</view></view>
-        <view class='tb-inline'><view class='top'>报名人数</view><view class='bottom'>12</view></view>
-        <view class='tb-inline'><view class='top'>报名人数</view><view class='bottom'>12</view></view>
-      </view>
-      <view class='deadline fs-large'><view class='line left'></view><text>距离活动结束时间还有：<text>01:02:56</text></text><view class='line left'></view></view>
-      <view class='introduction fs-small'>活动介绍</view>
+<view class='gray-content fc-black'>
+  <topNotice text='恭喜XXX获得本次活动的擂主~！' bgcolor='#373b41'></topNotice>
+  <view class='vote-top'>
+    <view class='banner'>
+      <swiper autoplay>
+        <block wx:for='{{slideData}}' wx:key='competitor-slide'>
+          <swiper-item>
+            <imgBox src='{{item}}'></imgBox>
+          </swiper-item>
+        </block>
+      </swiper>
     </view>
-    <view class='competitor-list fs-medium'>
-        <view class='list-top {{isSearch ? "open": "close"}}'>
-          <view class='list-title'>你喜欢的参赛成员在哪儿呢？<image src = '../../images/1_02.jpg'></image></view>
-          <view class='list-search'>
-              <view class='fs-small search-open' bindtap='toggleSearch'> <text class='fs-small icon-arrow-left iconfont'></text> 搜索</view>
-              <view class = 'search-input'>
-                <view class='input-box'>
-                  <text class='icon-arrow-left iconfont left'></text> 
-                  <input type='text' class='left' placeholder='请输入选手编号或者名字进行搜索'></input>
-                  <text class='search-cancel fc-red' bindtap='toggleSearch'>取消</text>
-                </view>
-                <view class='search-comfirm'>搜索<text>这是一串字符</text></view></view>
+    <view class='info fs-large'>
+      <view class='tb-inline'>
+        <text class='top'>报名人数</text>
+        <text class='bottom'>12</text>
+      </view>
+      <view class='tb-inline'>
+        <text class='top'>累计投票</text>
+        <text class='bottom'>66</text>
+      </view>
+      <view class='tb-inline'>
+        <text class='top'>访问量</text>
+        <text class='bottom fc-red'>3460</text>
+      </view>
+    </view>
+    <view class='deadline fs-large'>
+      <view class='line left'></view>
+      <view>
+        <image class='clock.png' src='../../images/clock.png'></image>
+        <text>活动倒计时</text>
+        <countDown time='{{countDown}}' endText='投票结束'></countDown>
+      </view>
+      <view class='line left'></view>
+    </view>
+    <view class='introduction fs-small' bindtap='activityIntr'>活动介绍</view>
+  </view>
+  <view class='competitor-list fs-large'>
+    <view class='list-top {{isSearch ? "open": "close"}}'>
+      <view class='list-title'>你喜欢的参赛成员在哪儿呢？
+        <image src='../../images/1_02.jpg'></image>
+      </view>
+      <view class='list-search'>
+        <view class='fs-medium search-open' bindtap='toggleSearch'>
+          <text class='left icon-jiantou2 iconfont'></text> 搜索</view>
+        <view class='search-input'>
+          <view class='input-box'>
+            <text class='icon-sousuo iconfont left'></text>
+            <input placeholder-class="phcolor" type='text' class='left fc-black' placeholder='请输入选手编号或者名字进行搜索' bindinput='searchInput'></input>
+            <text class='search-cancel fc-red' bindtap='toggleSearch'>取消</text>
+          </view>
+          <view class='search-comfirm fs-large'>点击搜索
+            <text>"{{searchVal}}" </text>
           </view>
         </view>
-        <view class='list-main'>
-          <block wx:for='{{competitorList}}' wx:key='competitorList'>
-           <view class='list-item left'>
-              <view class='img-box' data-index='{{index}}' bindtap='toMain'>
-              <imgBox src='{{item.image}}'></imgBox>
-              </view>
-              <view class='item-info fs-small'>
-                <text class='item-number left'>{{item.number}}</text>
-                <text class='item-name ellipsis'>{{item.name}}</text>
-                <view class='item-ballot'><text class='iconfont icon-arrow-left'></text>{{item.ballot}}票</view>
-              </view>
-              <view class='item-vote right {{item.isVote ? "voted":""}}' data-isvote='{{item.isVote}}' data-index='{{index}}' bindtap='vote'>{{!item.isVote ? "投票":"已投票"}}</view>
-           </view>
-           </block>  
-        </view>
+      </view>
     </view>
+    <view class='list-main'>
+      <block wx:for='{{competitorList}}' wx:key='competitorList'>
+        <view class='list-item left'>
+          <view class='img-box' data-index='{{index}}' bindtap='toMain'>
+            <imgBox src='{{item.image}}'></imgBox>
+          </view>
+          <view class='item-info fs-small'>
+            <text class='item-number left'>{{item.number}}</text>
+            <text class='item-name ellipsis'>{{item.name}}</text>
+            <view class='item-ballot fc-red'>
+              <text class='iconfont icon-navicon-cptptj'></text>{{item.ballot}}票</view>
+          </view>
+          <view class='item-vote right {{item.isVote ? "voted":""}}' data-isvote='{{item.isVote}}' data-index='{{index}}' bindtap='vote'>{{!item.isVote ? "投票":"已投票"}}</view>
+        </view>
+      </block>
+    </view>
+    <view class='list-notice notice'>——所有选手已显示完毕——</view>
+  </view>
 </view>

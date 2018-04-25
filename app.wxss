@@ -33,3 +33,9 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.notice {
+  padding: 30rpx 0;
+  color:#939393;
+  text-align: center;
+}

@@ -15,15 +15,21 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "images/11.png",
+        "selectedIconPath":"images/1.png"
       },
       {
         "pagePath": "pages/rank/rank",
-        "text": "排行榜"
+        "text": "排行榜",
+        "iconPath": "images/2.png",
+        "selectedIconPath": "images/22.png"
       },
       {
         "pagePath": "pages/rule/rule",
-        "text": "规则"
+        "text": "规则",
+        "iconPath": "images/3.png",
+        "selectedIconPath": "images/33.png"
       }
     ],
     "selectedColor": "#ef3b4f",
